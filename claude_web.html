@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nashville: Your Next Career Move</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Nashville1.png')  center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 280px 20px;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #FF5A5F;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #FF4146;
+            transform: scale(1.05);
+        }
+        
+        .benefits {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: #FF5A5F;
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FF5A5F;
+        }
+        
+        .benefit-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .testimonials {
+            background-color: #2C3E50;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .testimonials .section-title {
+            color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .author-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .author-title {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .stats {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FF5A5F;
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+        }
+        
+        .living {
+            background-color: #f0f0f0;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .living-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto 0;
+        }
+        
+        .living-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .living-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .living-content {
+            padding: 20px;
+        }
+        
+        .living-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .companies {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .company-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: filter 0.3s, opacity 0.3s;
+            max-width: 120px;
+            margin: 0 auto;
+        }
+        
+        .company-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .program {
+            background-color: #FF5A5F;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .program .section-title:after {
+            background-color: white;
+        }
+        
+        .program-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 50px auto 0;
+            gap: 30px;
+        }
+        
+        .program-step {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: #FF5A5F;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .social-proof {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .social-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: #FF5A5F;
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #FF5A5F;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+            max-width: 1200px;
+            margin: 20px auto 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NASHVILLE: NEXT</div>
+        <nav class="nav">
+            <a href="#benefits">Benefits</a>
+            <a href="#living">Living</a>
+            <a href="#companies">Companies</a>
+            <a href="#program">Program</a>
+            <a href="#apply">Apply</a>
+        </nav>
+        <h1>Launch Your Career in Nashville</h1>
+        <p class="tagline">One Year. Countless Opportunities. Lifetime Connections.</p>
+        <a href="#program" class="cta-button">Join Our Program</a>
+    </header>
+    
+    <!-- <style>
+        header {
+            position: relative;
+            background: url('Nashville1.png') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+    
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+        }
+    
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style> -->
+    
+    <section class="benefits" id="benefits">
+        <h2 class="section-title">Why Nashville?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <h3 class="benefit-title">Career Growth</h3>
+                <p>Access to booming industries including healthcare, music, technology, and finance with mentorship opportunities and professional development.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏠</div>
+                <h3 class="benefit-title">Affordable Living</h3>
+                <p>Enjoy a cost of living 9.6% below the national average, with no state income tax and housing costs significantly lower than coastal cities.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎸</div>
+                <h3 class="benefit-title">Vibrant Culture</h3>
+                <p>Experience world-class music, arts, food, and entertainment in a city known for its creativity and southern hospitality.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🌳</div>
+                <h3 class="benefit-title">Quality of Life</h3>
+                <p>Balance work with outdoor recreation, green spaces, and a community-focused atmosphere while enjoying a temperate four-season climate.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔄</div>
+                <h3 class="benefit-title">Work-Life Balance</h3>
+                <p>Shorter commutes (average 24.3 minutes) and a growing remote work culture provide more time for what matters to you.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h3 class="benefit-title">Community</h3>
+                <p>Join a welcoming network of young professionals through organized networking events, social groups, and volunteer opportunities.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2 class="section-title">Success Stories</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Moving to Nashville was the best career decision I've made. The tech community welcomed me, mentored me, and within a year I was promoted to team lead with higher pay than I had in Chicago."</p>
+                <div class="testimonial-author">
+                    <!-- <img src="/api/placeholder/50/50" alt="Testimonial author" class="author-image"> -->
+                    <div>
+                        <div class="author-name">Mia Johnson</div>
+                        <div class="author-title">Software Engineer, Healthcare IT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I came for one year through this program and four years later, I'm still here! I found professional opportunities I would've waited years for in NYC, plus I could actually afford to buy a house."</p>
+                <div class="testimonial-author">
+                    <!-- <img src="/api/placeholder/50/50" alt="Testimonial author" class="author-image"> -->
+                    <div>
+                        <div class="author-name">James Wilson</div>
+                        <div class="author-title">Marketing Director, Entertainment Industry</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The connections I made through the Nashville program introduced me to my business partner. Now we run a successful startup and have raised $2M in funding, all while enjoying Nashville's amazing quality of life."</p>
+                <div class="testimonial-author">
+                    <!-- <img src="/api/placeholder/50/50" alt="Testimonial author" class="author-image"> -->
+                    <div>
+                        <div class="author-name">Sophia Martinez</div>
+                        <div class="author-title">Co-founder, Tech Startup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats">
+        <h2 class="section-title">Nashville by the Numbers</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">14%</div>
+                <div class="stat-text">Job Growth Rate (5x national average)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$0</div>
+                <div class="stat-text">State Income Tax</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">9.6%</div>
+                <div class="stat-text">Lower Cost of Living vs. National Average</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">40+</div>
+                <div class="stat-text">Fortune 500 Companies with Nashville Presence</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="living" id="living">
+        <h2 class="section-title">Life in Music City</h2>
+        <div class="living-grid">
+            <div class="living-card">
+                <img src="Nashville neighborhoods.webp" alt="Nashville neighborhoods" class="living-image">
+                <div class="living-content">
+                    <h3 class="living-title">Diverse Neighborhoods</h3>
+                    <p>From the artsy East Nashville to upscale Green Hills, find a community that matches your lifestyle and budget.</p>
+                </div>
+            </div>
+            <div class="living-card">
+                <img src="Nashville food scene.jpg" alt="Nashville food scene" class="living-image">
+                <div class="living-content">
+                    <h3 class="living-title">Culinary Excellence</h3>
+                    <p>Experience a thriving food scene from famous hot chicken to award-winning restaurants by celebrity chefs.</p>
+                </div>
+            </div>
+            <div class="living-card">
+                <img src="Nashville outdoor activities.webp" alt="Nashville outdoor activities" class="living-image">
+                <div class="living-content">
+                    <h3 class="living-title">Outdoor Recreation</h3>
+                    <p>Explore 100+ parks, greenways, lakes, and the Cumberland River, all within easy reach of downtown.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- <section class="companies" id="companies">
+        <h2 class="section-title">Participating Companies</h2>
+        <p>Our program partners with leading employers across diverse industries:</p>
+        <div class="companies-grid">
+            <img src="/api/placeholder/120/80" alt="Company logo" class="company-logo">
+            <img src="/api/placeholder/120/80" alt="Company logo" class="company-logo">
+            <img src="/api/placeholder/120/80" alt="Company logo" class="company-logo">
+            <img src="/api/placeholder/120/80" alt="Company logo" class="company-logo">
+            <img src="/api/placeholder/120/80" alt="Company logo" class="company-logo">
+            <img src="/api/placeholder/120/80" alt="Company logo" class="company-logo">
+        </div>
+    </section> -->
+    
+    <section class="program" id="program">
+        <h2 class="section-title">The Nashville Next Program</h2>
+        <p>A structured one-year experience designed to accelerate your career while enjoying everything Nashville offers.</p>
+        <div class="program-steps">
+            <div class="program-step">
+                <div class="step-number">1</div>
+                <h3>Apply</h3>
+                <p>Submit your application with your resume, career interests, and why you want to join the Nashville community.</p>
+            </div>
+            <div class="program-step">
+                <div class="step-number">2</div>
+                <h3>Match</h3>
+                <p>Get matched with companies and positions aligned with your skills and career goals.</p>
+            </div>
+            <div class="program-step">
+                <div class="step-number">3</div>
+                <h3>Relocate</h3>
+                <p>Receive relocation assistance, temporary housing options, and orientation to help you settle in.</p>
+            </div>
+            <div class="program-step">
+                <div class="step-number">4</div>
+                <h3>Connect</h3>
+                <p>Join our community through exclusive networking events, professional development, and social gatherings.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta" id="apply">
+        <h2>Ready to Launch Your Nashville Journey?</h2>
+        <p>Applications for our next cohort are open. Join hundreds of young professionals who have accelerated their careers while enjoying Nashville's unique lifestyle.</p>
+        <a href="#" class="cta-button">Apply Now</a>
+        <div class="social-proof">
+            <div class="social-badge">#1 City for Young Professionals - Forbes</div>
+            <div class="social-badge">Top 5 Job Markets - Wall Street Journal</div>
+            <div class="social-badge">Best Work-Life Balance - Money Magazine</div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-title">Nashville: Next</h3>
+                <p>A Nashville Chamber of Commerce initiative connecting young professionals with career opportunities in Music City.</p>
+                <div class="social-links">
+                    <a href="#">📱</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Resources</h3>
+                <div class="footer-links">
+                    <a href="#">Housing Guide</a>
+                    <a href="#">Nashville Neighborhoods</a>
+                    <a href="#">Cost of Living Calculator</a>
+                    <a href="#">Transportation Info</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Program</h3>
+                <div class="footer-links">
+                    <a href="#">How It Works</a>
+                    <a href="#">Partner Companies</a>
+                    <a href="#">Success Stories</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Contact</h3>
+                <div class="footer-links">
+                    <a href="#">Email Us</a>
+                    <a href="#">Schedule a Call</a>
+                    <a href="#">Visit Our Office</a>
+                    <a href="#">Press Inquiries</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nashville Chamber of Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
